@@ -12,6 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -28,6 +29,11 @@
                     <li class="nav-item"><a class="nav-link" href="#historia">História</a></li>
                     <li class="nav-item"><a class="nav-link" href="#gastronomia">Gastronomia</a></li>
                     <li class="nav-item"><a class="nav-link" href="#turismo">Turismo</a></li>
+                    <li class="nav-item">
+                        <button id="darkModeToggle" class="btn btn-outline-secondary">
+                            <i class="fas fa-moon me-2"></i>Modo Escuro
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -35,18 +41,17 @@
 
     <main>
         <section id="inicio" class="py-5 mt-5">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row align-items-center">
-                    <div class="col-md-6 hidden-left">
+                    <div class="col-md-6">
                         <h1>Portugal</h1>
-                        <p>Portugal é um país da Europa Ocidental, localizado na península Ibérica, situado nas
-                            margens do oceano Atlântico. A história portuguesa é marcada pelo período das Grandes
-                            Navegações, momento em que Portugal detinha várias possessões territoriais pelo globo, sendo
-                            uma das maiores potências mundiais.</p>
+                        <p>Portugal é um país da Europa Ocidental, localizado na península Ibérica, situado nas margens
+                            do oceano Atlântico. A história portuguesa é marcada pelo período das Grandes Navegações,
+                            momento em que Portugal detinha várias possessões territoriais pelo globo, sendo uma das
+                            maiores potências mundiais.</p>
                     </div>
-                    <div class="col-md-6 order-md-1 hidden-left">
-                        <img src="./img/Bandeira.jfif" alt="Bandeira de Portugal"
-                            class="img-fluid rounded shadow imagem-padrao">
+                    <div class="col-md-6 text-center">
+                        <img src="./img/Bandeira.jfif" alt="Bandeira de Portugal" class="img-fluid rounded shadow img-bandeira">
                     </div>
                 </div>
             </div>
@@ -55,14 +60,13 @@
         <section id="inovacao" class="py-5 bg-light">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-md-6 order-md-2 hidden-right">
+                    <div class="col-md-6 order-md-2">
                         <h2>Portugal se tornou um dos principais centros de tecnologia da Europa</h2>
                         <p>Incentivos do governo, expansão da rede 5G e melhora da infraestrutura integram a receita que
                             transformou o país em berço de startups.</p>
                     </div>
-                    <div class="col-md-6 order-md-1 hidden-left">
-                        <img src="./img/especial-tec-5g-portugal-1-web-summit-pag-8.webp" alt="Inovação em Portugal"
-                            class="img-fluid rounded shadow imagem-padrao">
+                    <div class="col-md-6 order-md-1 text-center">
+                        <img src="./img/especial-tec-5g-portugal-1-web-summit-pag-8.webp" alt="Inovação em Portugal" class="img-fluid rounded shadow">
                     </div>
                 </div>
             </div>
@@ -71,7 +75,7 @@
         <section id="lifestyle" class="py-5">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-md-6 hidden-left">
+                    <div class="col-md-6">
                         <h2>Lifestyle Português</h2>
                         <p>Em mais de 800 km de costa banhada pelo oceano Atlântico podem encontrar-se as mais belas
                             praias de areia branca e fina, seguras e de grande qualidade, com um número invejável de
@@ -81,9 +85,8 @@
                             de atravessar o Tejo, pelo Estoril, Guincho e Ericeira, subindo a Peniche e à Nazaré,
                             mundialmente famosa pelas super ondas.</p>
                     </div>
-                    <div class="col-md-6 hidden-right">
-                        <img src="./img/Conheca-as-melhores-praias-de-Portugal-Capa.webp" alt="Lifestyle Português"
-                            class="img-fluid rounded shadow imagem-padrao">
+                    <div class="col-md-6 text-center">
+                        <img src="./img/Conheca-as-melhores-praias-de-Portugal-Capa.webp" alt="Lifestyle Português" class="img-fluid rounded shadow">
                     </div>
                 </div>
             </div>
@@ -95,9 +98,33 @@
             <span class="text-muted">© 2023 Portugal Moderno. Todos os direitos reservados.</span>
         </div>
     </footer>
+    <button id="backToTopBtn" title="Voltar ao Topo">↑</button>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="script.js"></script>
+    <script>
+        // Código existente do modo escuro
+        document.getElementById('darkModeToggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            const icon = this.querySelector('i');
+            icon.classList.toggle('fa-moon');
+            icon.classList.toggle('fa-sun');
+        });
+
+        // Código atualizado para o botão "Voltar ao Topo"
+        const backToTopBtn = document.getElementById("backToTopBtn");
+
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 100) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        });
+
+        backToTopBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+    </script>
 </body>
 
 </html>

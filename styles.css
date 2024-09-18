@@ -11,6 +11,28 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode .navbar {
+    background-color: #222;
+}
+
+.dark-mode .navbar-light .navbar-brand,
+.dark-mode .navbar-light .navbar-nav .nav-link {
+    color: #fff !important;
+}
+
+.dark-mode .bg-light {
+    background-color: #444 !important;
+}
+
+.dark-mode .text-muted {
+    color: #ccc !important;
+}
+
 .navbar {
     background-color: #f0f6f0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -26,7 +48,7 @@ body {
 }
 
 section {
-    padding: 100px 0;
+    padding: 60px 15px;
 }
 
 h2,
@@ -35,6 +57,7 @@ p {
     color: #333;
     font-weight: 500;
 }
+
 
 .img-fluid {
     max-width: 100%;
@@ -46,16 +69,92 @@ p {
     transform: scale(1.05);
 }
 
-.hidden-left,
-.hidden-right {
-    opacity: 1;
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+
+.img-bandeira {
+    max-width: 80%; 
+    margin: 0 auto; 
+    display: block;
 }
 
-.hidden-left {
-    transform: translateX(-50px);
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
 }
 
-.hidden-right {
-    transform: translateX(50px);
+#darkModeToggle {
+    margin-left: 10px;
+    padding: 8px 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #f8f9fa;
+    color: #333;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+}
+
+#darkModeToggle:hover {
+    background-color: #e2e6ea;
+    color: #000;
+}
+
+.dark-mode #darkModeToggle {
+    background-color: #333;
+    color: #fff !important;
+    border-color: #fff;
+}
+
+.dark-mode #darkModeToggle:hover {
+    background-color: #444;
+    color: #fff !important;
+}
+
+.dark-mode .navbar-light .navbar-nav .nav-link,
+.dark-mode .navbar-light .navbar-brand {
+    color: #fff !important;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode p {
+    color: #fff;
+}
+
+#backToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #a90909;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+#backToTopBtn:hover {
+    background-color: #7e0707;
+}
+
+.dark-mode #backToTopBtn {
+    background-color: #555;
+}
+
+.dark-mode #backToTopBtn:hover {
+    background-color: #777;
 }
