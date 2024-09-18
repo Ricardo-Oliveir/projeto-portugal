@@ -1,49 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Descubra a história, cultura e tecnologia de Portugal com belas paisagens e inovações.">
+    <meta name="keywords" content="Portugal, Turismo, História, Inovação, Tecnologia">
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+    <title>Portugal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>Portugual</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <section class="hidden">
-        <h2>Bem vindo</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum temporibus doloribus expedita quisquam
-            sapiente pariatur dolores eligendi, debitis excepturi totam, neque delectus labore rerum voluptatem minima
-            nulla aliquid quibusdam porro?</p>
-    </section>
-
-    <section class="hidden">
-        <h2>meu site</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, dolore. Fuga maiores culpa quasi vitae
-            dolores fugit hic enim ut itaque accusamus labore, nam cum consequatur illo natus minus neque!</p>
-    </section>
-
-    <section class="hidden">
-        <img src="./img/Bandeira.jfif">
-    </section>
-
-    <section class="hidden">
-
-        <h2>users</h2>
-        <div class="logos">
-
-            <div class="hidden">
-                <img class="avatar" src="./img/palacio.jfif">
-            </div>
-            <div class="hidden">
-                <img class="avatar" src="./img/palacio2.jfif">
-            </div>
-            <div class="hidden">
-                <img class="avatar" src="./img/porto.jfif">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Portugal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#historia">História</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gastronomia">Gastronomia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#turismo">Turismo</a></li>
+                </ul>
             </div>
         </div>
-    </section>
+    </nav>
 
+    <main>
+        <section id="inicio" class="py-5 mt-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 hidden-left">
+                        <h1>Portugal</h1>
+                        <p>Portugal é um país da Europa Ocidental, localizado na península Ibérica, situado nas
+                            margens do oceano Atlântico. A história portuguesa é marcada pelo período das Grandes
+                            Navegações, momento em que Portugal detinha várias possessões territoriais pelo globo, sendo
+                            uma das maiores potências mundiais.</p>
+                    </div>
+                    <div class="col-md-6 order-md-1 hidden-left">
+                        <img src="./img/Bandeira.jfif" alt="Bandeira de Portugal"
+                            class="img-fluid rounded shadow imagem-padrao">
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section id="inovacao" class="py-5 bg-light">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 order-md-2 hidden-right">
+                        <h2>Portugal se tornou um dos principais centros de tecnologia da Europa</h2>
+                        <p>Incentivos do governo, expansão da rede 5G e melhora da infraestrutura integram a receita que
+                            transformou o país em berço de startups.</p>
+                    </div>
+                    <div class="col-md-6 order-md-1 hidden-left">
+                        <img src="./img/especial-tec-5g-portugal-1-web-summit-pag-8.webp" alt="Inovação em Portugal"
+                            class="img-fluid rounded shadow imagem-padrao">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="lifestyle" class="py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 hidden-left">
+                        <h2>Lifestyle Português</h2>
+                        <p>Em mais de 800 km de costa banhada pelo oceano Atlântico podem encontrar-se as mais belas
+                            praias de areia branca e fina, seguras e de grande qualidade, com um número invejável de
+                            bandeiras azuis (352 em 2019). A Sul, o Algarve, com 200 km de frente de mar e águas
+                            quentes, além do Sudoeste alentejano, ainda com tanta beleza selvagem. Chegando mais próximo
+                            de Lisboa pelo Sul, Troia, Comporta e todo o areal da Costa da Caparica, seguindo, já depois
+                            de atravessar o Tejo, pelo Estoril, Guincho e Ericeira, subindo a Peniche e à Nazaré,
+                            mundialmente famosa pelas super ondas.</p>
+                    </div>
+                    <div class="col-md-6 hidden-right">
+                        <img src="./img/Conheca-as-melhores-praias-de-Portugal-Capa.webp" alt="Lifestyle Português"
+                            class="img-fluid rounded shadow imagem-padrao">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container text-center">
+            <span class="text-muted">© 2023 Portugal Moderno. Todos os direitos reservados.</span>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
