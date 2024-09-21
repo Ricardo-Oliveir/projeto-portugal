@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 <body>
@@ -51,7 +52,8 @@
                             maiores potências mundiais.</p>
                     </div>
                     <div class="col-md-6 text-center">
-                        <img src="./img/Bandeira.jfif" alt="Bandeira de Portugal" class="img-fluid rounded shadow img-bandeira">
+                        <img src="./img/Bandeira.jfif" alt="Bandeira de Portugal"
+                            class="img-fluid rounded shadow img-bandeira">
                     </div>
                 </div>
             </div>
@@ -66,7 +68,8 @@
                             transformou o país em berço de startups.</p>
                     </div>
                     <div class="col-md-6 order-md-1 text-center">
-                        <img src="./img/especial-tec-5g-portugal-1-web-summit-pag-8.webp" alt="Inovação em Portugal" class="img-fluid rounded shadow">
+                        <img src="./img/especial-tec-5g-portugal-1-web-summit-pag-8.webp" alt="Inovação em Portugal"
+                            class="img-fluid rounded shadow">
                     </div>
                 </div>
             </div>
@@ -86,45 +89,41 @@
                             mundialmente famosa pelas super ondas.</p>
                     </div>
                     <div class="col-md-6 text-center">
-                        <img src="./img/Conheca-as-melhores-praias-de-Portugal-Capa.webp" alt="Lifestyle Português" class="img-fluid rounded shadow">
+                        <img src="./img/Conheca-as-melhores-praias-de-Portugal-Capa.webp" alt="Lifestyle Português"
+                            class="img-fluid rounded shadow">
                     </div>
                 </div>
             </div>
         </section>
+        <section id="galeria" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Galeria de Fotos</h2>
+                <div class="logos">
+                    <div class="hidden">
+                        <img class="img-fluid rounded shadow" src="./img/palacio.jfif" alt="Palácio">
+                    </div>
+                    <div class="hidden">
+                        <img class="img-fluid rounded shadow" src="./img/palacio2.jfif" alt="Outro Palácio">
+                    </div>
+                    <div class="hidden">
+                        <img class="img-fluid rounded shadow" src="./img/porto.jfif" alt="Porto">
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer class="footer mt-auto py-3 bg-light">
         <div class="container text-center">
-            <span class="text-muted">© 2023 Portugal Moderno. Todos os direitos reservados.</span>
+            <span class="text-muted">© 2024 Projeto Volta ao Mundo Fatec .</span>
         </div>
     </footer>
+
     <button id="backToTopBtn" title="Voltar ao Topo">↑</button>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Código existente do modo escuro
-        document.getElementById('darkModeToggle').addEventListener('click', function() {
-            document.body.classList.toggle('dark-mode');
-            const icon = this.querySelector('i');
-            icon.classList.toggle('fa-moon');
-            icon.classList.toggle('fa-sun');
-        });
-
-        // Código atualizado para o botão "Voltar ao Topo"
-        const backToTopBtn = document.getElementById("backToTopBtn");
-
-        window.addEventListener('scroll', function() {
-            if (window.pageYOffset > 100) {
-                backToTopBtn.style.display = "block";
-            } else {
-                backToTopBtn.style.display = "none";
-            }
-        });
-
-        backToTopBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({top: 0, behavior: 'smooth'});
-        });
-    </script>
+    <script src="scripts.js"></script> <!-- Certifique-se de que o nome do arquivo esteja correto -->
 </body>
 
 </html>
