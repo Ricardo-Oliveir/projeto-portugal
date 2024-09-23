@@ -139,7 +139,7 @@ p {
 }
 
 #backToTopBtn:hover {
-    background-color: #0056b3;
+    background-color: #6271e6;
 }
 
 .dark-mode #backToTopBtn {
@@ -198,4 +198,120 @@ p {
 .logos div:nth-child(4),
 .logos div:nth-child(5) {
     transition-delay: 700ms;
+}
+
+/* Estilos para elementos que saem de forma intercalada */
+.reveal-left,
+.reveal-right {
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.reveal-left {
+    transform: translateX(-50px);
+}
+
+.reveal-right {
+    transform: translateX(50px);
+}
+
+.reveal-left.active,
+.reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Adicione estes novos estilos para outras paginas */
+.historia-section {
+    overflow: hidden;
+}
+
+.historia-row {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.image-col, .text-col {
+    transition: transform 0.5s ease-out;
+    width: 100%;
+    max-width: 600px; /* Ajuste este valor conforme necessário */
+    margin: 0 auto;
+}
+
+.image-col {
+    transform: translateX(-100%);
+}
+
+.text-col {
+    transform: translateY(100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.historia-row.visible .image-col {
+    transform: translateX(0);
+}
+
+.historia-row.visible .text-col {
+    transform: translateY(0);
+}
+
+.historia-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Estilos para os títulos h2 */
+.text-col h2 {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 1rem;
+    font-size: 1.5rem; /* Ajuste conforme necessário */
+}
+
+/* Estilos para os parágrafos */
+.text-col p {
+    margin-top: 0;
+}
+
+/* Adicione um espaçamento entre a imagem e o texto */
+.image-col {
+    margin-bottom: 2rem;
+}
+
+/* Ajuste o layout para telas maiores */
+@media (min-width: 768px) {
+    .historia-row {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .image-col, .text-col {
+        width: 50%;
+    }
+
+    .image-col {
+        margin-bottom: 0;
+        padding-right: 1rem;
+    }
+
+    .text-col {
+        padding-left: 1rem;
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    /* Aumenta o tamanho da fonte para telas maiores */
+    .text-col h2 {
+        font-size: 1.8rem; /* Ajuste conforme necessário */
+    }
 }
