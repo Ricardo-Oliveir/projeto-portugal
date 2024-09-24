@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Adicionando Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 
 <body>
@@ -29,6 +31,7 @@
                     <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
                     <li class="nav-item"><a class="nav-link" href="historia.html">História</a></li>
                     <li class="nav-item"><a class="nav-link" href="gastronomia.html">Gastronomia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="vinhos.html">Vinhos</a></li>
                     <li class="nav-item"><a class="nav-link" href="turismo.html">Turismo</a></li>
                     <li class="nav-item">
                         <button id="darkModeToggle" class="btn btn-outline-secondary">
@@ -40,19 +43,43 @@
         </div>
     </nav>
 
+    
+    <div id="map" style="height: 400px; width: 100%; margin-top: 80px;"></div>
 
+    <main>
+        <section class="container py-4">
+            <h3 class="text-center">Lugares Famosos em Portugal</h3>
+            <ul id="place-list">
+                <li class="list-group-item" data-lat="38.736946" data-lng="-9.142685">Lisboa</li>
+                <li class="list-group-item" data-lat="41.157944" data-lng="-8.629105">Porto</li>
+                <li class="list-group-item" data-lat="37.017963" data-lng="-7.930834">Faro</li>
+                <li class="list-group-item" data-lat="32.666992" data-lng="-16.924055">Funchal (Madeira)</li>
+                <li class="list-group-item" data-lat="40.203314" data-lng="-8.410257">Coimbra</li>
+                <li class="list-group-item" data-lat="41.545448" data-lng="-8.426507">Braga</li>
+                <li class="list-group-item" data-lat="38.568466" data-lng="-7.911025">Évora</li>
+                <li class="list-group-item" data-lat="38.802868" data-lng="-9.381658">Sintra</li>
+                <li class="list-group-item" data-lat="38.696907" data-lng="-9.421046">Cascais</li>
+            </ul>
+        </section>
     </main>
 
     <footer class="footer mt-auto py-3 bg-light">
         <div class="container text-center">
-            <span class="text-muted">© 2024 Projeto Volta ao Mundo Fatec .</span>
+            <span class="text-muted">© 2024 Projeto Volta ao Mundo Fatec.</span>
         </div>
     </footer>
 
     <button id="backToTopBtn" title="Voltar ao Topo">↑</button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="scripts.js"></script> <!-- Certifique-se de que o nome do arquivo esteja correto -->
+
+    <!-- Adicionando Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Seu script externo -->
+    <script src="scripts.js"></script> <!-- Certifique-se de que o caminho está correto -->
+
+  
 </body>
 
 </html>

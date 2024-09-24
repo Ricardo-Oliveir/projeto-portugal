@@ -267,27 +267,27 @@ p {
     margin: 0 auto;
 }
 
-/* Estilos para os títulos h2 */
+
 .text-col h2 {
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     margin-bottom: 1rem;
-    font-size: 1.5rem; /* Ajuste conforme necessário */
+    font-size: 1.5rem; 
 }
 
-/* Estilos para os parágrafos */
+
 .text-col p {
     margin-top: 0;
 }
 
-/* Adicione um espaçamento entre a imagem e o texto */
+
 .image-col {
     margin-bottom: 2rem;
 }
 
-/* Ajuste o layout para telas maiores */
+
 @media (min-width: 768px) {
     .historia-row {
         flex-direction: row;
@@ -310,8 +310,70 @@ p {
         align-items: flex-start;
     }
 
-    /* Aumenta o tamanho da fonte para telas maiores */
     .text-col h2 {
-        font-size: 1.8rem; /* Ajuste conforme necessário */
+        font-size: 1.8rem; 
     }
 }
+
+/* Estilizando o mapa */
+#map {
+    height: 500px;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+
+/* Estilizando a lista de lugares */
+#place-list {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0;
+    list-style: none;
+}
+
+h3 {
+    text-align: center; 
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+
+.list-group-item {
+    padding: 15px; 
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+    list-style: none; 
+}
+
+.list-group-item:before {
+    content: ""; 
+}
+
+
+.list-group-item:hover {
+    background-color: #bae3a3;
+    color: white;
+    cursor: pointer;
+    border-color: #ce5a2c;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.list-group-item:hover:before {
+    color: white;
+}
+
