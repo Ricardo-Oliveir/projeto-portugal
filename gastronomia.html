@@ -12,6 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- TODO: Replace with your actual Font Awesome kit URL -->
     <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
 </head>
@@ -41,13 +42,15 @@
         </div>
     </nav>
     <main>
+        <div class='container'><h1 class='text-center py-3'>Gastronomia Portuguesa</h1></div>
         <section class="py-5 mt-5 historia-section">
             <div class="container">
-                <div class="row historia-row">
-                    <div class="col-md-6 image-col">
-                        <img src="./img/bacalhau.jfif" alt="Castelo português" class="img-fluid historia-img">
-                    </div>
-                    <div class="col-md-6 text-col">
+                <article>
+                    <div class="row historia-row">
+                        <figure class="col-md-6 image-col">
+                            <img src="./img/bacalhau.jfif" alt="Prato de Bacalhau à Brás com lascas de bacalhau, batata palha e ovos mexidos" class="img-fluid historia-img">
+                        </figure>
+                        <div class="col-md-6 text-col">
                         <h2>Bacalhau à Brás</h2>
                         <p>Uma das muitas formas de preparar bacalhau em Portugal, feito com lascas de bacalhau, batata
                             palha, cebola, e ovos mexidos.</p>
@@ -58,26 +61,29 @@
 
         <section class="py-5 bg-light historia-section">
             <div class="container">
-                <div class="row historia-row">
-                    <div class="col-md-6 text-col">
-                        <h2>Caldo Verde</h2>
-                        <p>Uma sopa tradicional feita com couve-galega, batata, chouriço e azeite.
-                            Francesinha – Sanduíche típica do Porto, recheada com carnes diversas, coberta com queijo
-                            derretido e servida com um molho especial à base de tomate e cerveja.</p>
+                <article>
+                    <div class="row historia-row">
+                        <div class="col-md-6 text-col">
+                            <h2>Caldo Verde</h2>
+                            <p>Uma sopa tradicional feita com couve-galega, batata, chouriço e azeite.
+                                Francesinha – Sanduíche típica do Porto, recheada com carnes diversas, coberta com queijo
+                                derretido e servida com um molho especial à base de tomate e cerveja.</p>
+                        </div>
+                        <figure class="col-md-6 image-col">
+                            <img src="./img/caldo.jfif" alt="Tigela fumegante de Caldo Verde, sopa tradicional portuguesa com couve e chouriço" class="img-fluid historia-img">
+                        </figure>
                     </div>
-                    <div class="col-md-6 image-col">
-                        <img src="./img/caldo.jfif" alt="Caravela portuguesa" class="img-fluid historia-img">
-                    </div>
-                </div>
+                </article>
             </div>
         </section>
         <section class="py-5 mt-5 historia-section">
             <div class="container">
-                <div class="row historia-row">
-                    <div class="col-md-6 image-col">
-                        <img src="./img/pastel.jfif" alt="Castelo português" class="img-fluid historia-img">
-                    </div>
-                    <div class="col-md-6 text-col">
+                <article>
+                    <div class="row historia-row">
+                        <figure class="col-md-6 image-col">
+                            <img src="./img/pastel.jfif" alt="Pastel de Nata dourado e polvilhado com canela, doce tradicional português" class="img-fluid historia-img">
+                        </figure>
+                        <div class="col-md-6 text-col">
                         <h2>Pastéis de Nata</h2>
                         <p>Doces de massa folhada recheados com creme de nata, conhecidos mundialmente.</p>
                     </div>
@@ -85,48 +91,53 @@
             </div>
         </section>
 
-        <section id="era-descobrimentos" class="py-5 bg-light historia-section">
+        <section class="py-5 bg-light historia-section">
             <div class="container">
-                <div class="row historia-row">
-                    <div class="col-md-6 text-col">
-                        <h2>Sardinhas Assadas</h2>
-                        <p>Prato simples e muito popular, especialmente durante as festas de Santo António, com
-                            sardinhas grelhadas servidas com pão ou batatas.</p>
+                <article>
+                    <div class="row historia-row">
+                        <div class="col-md-6 text-col">
+                            <h2>Sardinhas Assadas</h2>
+                            <p>Prato simples e muito popular, especialmente durante as festas de Santo António, com
+                                sardinhas grelhadas servidas com pão ou batatas.</p>
+                        </div>
+                        <figure class="col-md-6 image-col">
+                            <img src="./img/sardinhas.jfif" alt="Sardinhas assadas na grelha, prato típico das festas populares em Portugal" class="img-fluid historia-img">
+                        </figure>
                     </div>
-                    <div class="col-md-6 image-col">
-                        <img src="./img/sardinhas.jfif" alt="Caravela portuguesa" class="img-fluid historia-img">
-                    </div>
-                </div>
+                </article>
             </div>
         </section>
-        <section id="intro-historia" class="py-5 mt-5 historia-section"></section>
-        <div class="container">
-            <div class="row historia-row">
-                <div class="col-md-6 image-col">
-                    <img src="./img/arroz.jfif" alt="Castelo português" class="img-fluid historia-img">
-                </div>
-                <div class="col-md-6 text-col">
-                    <h2>Polvo à Lagareiro </h2>
-                    <p>Prato de polvo assado com bastante azeite, alho e batatas ao murro</p>
-                </div>
-            </div>
-        </div>
-        </section>
-
-        <section id="era-descobrimentos" class="py-5 bg-light historia-section">
+        <section class="py-5 historia-section">
             <div class="container">
-                <div class="row historia-row">
-                    <div class="col-md-6 text-col">
-                        <h2>Arroz de Pato</h2>
-                        <p>Arroz cozido com pedaços de pato, chouriço e especiarias, gratinado no forno</p>
+                <article>
+                    <div class="row historia-row">
+                        <figure class="col-md-6 image-col">
+                            <img src="./img/arroz.jfif" alt="Prato de Polvo à Lagareiro, com polvo assado em azeite e batatas" class="img-fluid historia-img">
+                        </figure>
+                        <div class="col-md-6 text-col">
+                            <h2>Polvo à Lagareiro </h2>
+                            <p>Prato de polvo assado com bastante azeite, alho e batatas ao murro</p>
+                        </div>
                     </div>
-                    <div class="col-md-6 image-col">
-                        <img src="./img/pato.jfif" alt="Caravela portuguesa" class="img-fluid historia-img">
-                    </div>
-                </div>
+                </article>
             </div>
         </section>
 
+        <section class="py-5 bg-light historia-section">
+            <div class="container">
+                <article>
+                    <div class="row historia-row">
+                        <div class="col-md-6 text-col">
+                            <h2>Arroz de Pato</h2>
+                            <p>Arroz cozido com pedaços de pato, chouriço e especiarias, gratinado no forno</p>
+                        </div>
+                        <figure class="col-md-6 image-col">
+                            <img src="./img/pato.jfif" alt="Travessa de Arroz de Pato, gratinado no forno com chouriço" class="img-fluid historia-img">
+                        </figure>
+                    </div>
+                </article>
+            </div>
+        </section>
     </main>
 
     <footer class="footer mt-auto py-3 bg-light">
