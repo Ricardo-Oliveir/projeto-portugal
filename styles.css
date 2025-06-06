@@ -1,3 +1,52 @@
+:root {
+    --primary-text-color: #333;
+    --primary-bg-color: whitesmoke; /* #F5F5F5 */
+    --secondary-bg-color: #f8f9fa; /* Common light background e.g. for buttons */
+
+    --dark-mode-bg-color: #333;
+    --dark-mode-text-color: #fff;
+    --dark-mode-navbar-bg-color: #222;
+    --dark-mode-section-bg-color: #444; /* for elements that are .bg-light in light mode */
+    --dark-mode-muted-text-color: #ccc;
+
+    --light-mode-navbar-bg-color: #f0f6f0;
+    --light-mode-muted-text-color: #5a6268; /* Improved for contrast */
+
+    --link-hover-color: #a90909;
+
+    --button-dark-mode-toggle-bg-color: #333;
+    --button-dark-mode-toggle-text-color: #fff;
+    --button-dark-mode-toggle-border-color: #fff;
+    --button-dark-mode-toggle-hover-bg-color: #444;
+
+    --button-light-mode-toggle-bg-color: #f8f9fa;
+    --button-light-mode-toggle-text-color: #333;
+    --button-light-mode-toggle-border-color: #333;
+    --button-light-mode-toggle-hover-bg-color: #e2e6ea;
+    --button-light-mode-toggle-hover-text-color: #000;
+
+    --back-to-top-bg-color: #007bff;
+    --back-to-top-text-color: white;
+    --back-to-top-hover-bg-color: #6271e6;
+    --dark-mode-back-to-top-bg-color: #555;
+    --dark-mode-back-to-top-hover-bg-color: #777;
+
+    --list-item-bg-color: #f9f9f9;
+    --list-item-text-color: #333;
+    --list-item-border-color: #ddd;
+    --list-item-hover-bg-color: #6a9f42; /* Adjusted for contrast */
+    --list-item-hover-text-color: white; /* Adjusted for contrast */
+    --list-item-hover-border-color: #ce5a2c;
+
+
+    --font-family-default: 'Poppins', sans-serif;
+    --section-padding-default: 60px 15px;
+    --section-padding-mobile: 30px 15px;
+    --h3-font-size: 24px; /* From existing h3 style */
+    --nav-link-font-weight: 600;
+    --text-font-weight: 500;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,57 +54,67 @@
 }
 
 body {
-    background-color: whitesmoke;
+    background-color: var(--primary-bg-color);
     margin: 0;
     padding-top: 76px;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-family-default);
 }
 
 body.dark-mode {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--dark-mode-bg-color);
+    color: var(--dark-mode-text-color);
 }
 
 .dark-mode .navbar {
-    background-color: #222;
+    background-color: var(--dark-mode-navbar-bg-color);
 }
 
 .dark-mode .navbar-light .navbar-brand,
 .dark-mode .navbar-light .navbar-nav .nav-link {
-    color: #fff !important;
+    color: var(--dark-mode-text-color) !important;
 }
 
 .dark-mode .bg-light {
-    background-color: #444 !important;
+    background-color: var(--dark-mode-section-bg-color) !important;
+}
+
+body:not(.dark-mode) .text-muted {
+    color: var(--light-mode-muted-text-color);
 }
 
 .dark-mode .text-muted {
-    color: #ccc !important;
+    color: var(--dark-mode-muted-text-color) !important;
 }
 
 .navbar {
-    background-color: #f0f6f0;
+    background-color: var(--light-mode-navbar-bg-color);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-link {
-    font-weight: 600;
+    font-weight: var(--nav-link-font-weight);
 }
 
 .navbar-brand:hover,
 .nav-link:hover {
-    color: #a90909;
+    color: var(--link-hover-color);
 }
 
 section {
-    padding: 60px 15px;
+    padding: var(--section-padding-default);
 }
 
 h1,
 h2,
 p {
-    color: #333;
-    font-weight: 500;
+    color: var(--primary-text-color);
+    font-weight: var(--text-font-weight);
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode p {
+    color: var(--dark-mode-text-color);
 }
 
 @media (max-width: 768px) {
@@ -64,7 +123,7 @@ p {
     }
 
     section {
-        padding: 30px 15px;
+        padding: var(--section-padding-mobile);
     }
 }
 
@@ -85,39 +144,32 @@ p {
     display: block;
 }
 
-/* Estilos para modo escuro */
-.dark-mode h1,
-.dark-mode h2,
-.dark-mode p {
-    color: #fff;
-}
-
 /* Botão de Modo Escuro */
 #darkModeToggle {
     margin-left: 10px;
     padding: 8px 16px;
-    font-size: 1rem;
-    font-weight: 600;
-    background-color: #f8f9fa;
-    color: #333;
-    border: 1px solid #333;
+    font-size: 1rem; /* Consider making a variable if used elsewhere */
+    font-weight: var(--nav-link-font-weight); /* Assuming similar weight to nav links */
+    background-color: var(--button-light-mode-toggle-bg-color);
+    color: var(--button-light-mode-toggle-text-color);
+    border: 1px solid var(--button-light-mode-toggle-border-color);
     transition: all 0.3s ease;
 }
 
 #darkModeToggle:hover {
-    background-color: #e2e6ea;
-    color: #000;
+    background-color: var(--button-light-mode-toggle-hover-bg-color);
+    color: var(--button-light-mode-toggle-hover-text-color);
 }
 
 .dark-mode #darkModeToggle {
-    background-color: #333;
-    color: #fff !important;
-    border-color: #fff;
+    background-color: var(--button-dark-mode-toggle-bg-color);
+    color: var(--button-dark-mode-toggle-text-color) !important;
+    border-color: var(--button-dark-mode-toggle-border-color);
 }
 
 .dark-mode #darkModeToggle:hover {
-    background-color: #444;
-    color: #fff !important;
+    background-color: var(--button-dark-mode-toggle-hover-bg-color);
+    color: var(--button-dark-mode-toggle-text-color) !important; /* Ensure text color remains on hover in dark mode */
 }
 
 /* Botão "Voltar ao Topo" */
@@ -129,25 +181,25 @@ p {
     z-index: 99;
     border: none;
     outline: none;
-    background-color: #007bff;
-    color: white;
+    background-color: var(--back-to-top-bg-color);
+    color: var(--back-to-top-text-color);
     cursor: pointer;
     padding: 15px;
-    border-radius: 50%;
-    font-size: 18px;
+    border-radius: 50%; /* Consider making a variable if used elsewhere */
+    font-size: 18px; /* Consider making a variable if used elsewhere */
     transition: background-color 0.3s;
 }
 
 #backToTopBtn:hover {
-    background-color: #6271e6;
+    background-color: var(--back-to-top-hover-bg-color);
 }
 
 .dark-mode #backToTopBtn {
-    background-color: #555;
+    background-color: var(--dark-mode-back-to-top-bg-color);
 }
 
 .dark-mode #backToTopBtn:hover {
-    background-color: #777;
+    background-color: var(--dark-mode-back-to-top-hover-bg-color);
 }
 
 /* Galeria de Logos */
@@ -156,10 +208,10 @@ p {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 20px; /* Consider making a variable */
 }
 
-.logos>div {
+.logos>figure { /* Changed from div to figure */
     flex: 0 1 calc(33.333% - 20px);
     max-width: 300px;
     height: 200px;
@@ -173,11 +225,11 @@ p {
     object-position: center;
 }
 
-.logos>div:nth-child(2) {
+.logos>figure:nth-child(2) { /* Changed from div to figure */
     transition-delay: 200ms;
 }
 
-.logos>div:nth-child(3) {
+.logos>figure:nth-child(3) { /* Changed from div to figure */
     transition-delay: 400ms;
 }
 
@@ -194,11 +246,14 @@ p {
     transform: translateX(0);
 }
 
-.logos div:nth-child(3),
-.logos div:nth-child(4),
-.logos div:nth-child(5) {
+/* .logos div:nth-child(3), /* Original was targeting divs, ensure figure is intended if structure changed */
+/* .logos div:nth-child(4), */
+/* .logos div:nth-child(5) { */
+/* This selector might need adjustment if .logos direct children are always figures */
+.logos figure:nth-child(n+3) { /* More robust if only figures are children */
     transition-delay: 700ms;
 }
+
 
 /* Estilos para elementos que saem de forma intercalada */
 .reveal-left,
@@ -241,9 +296,14 @@ p {
     margin: 0 auto;
 }
 
-.image-col {
+.image-col { /* This is figure now in some files */
     transform: translateX(-100%);
 }
+
+figure.image-col { /* Ensure specificity if .image-col is now always a figure */
+    transform: translateX(-100%);
+}
+
 
 .text-col {
     transform: translateY(100%);
@@ -252,7 +312,8 @@ p {
     align-items: center;
 }
 
-.historia-row.visible .image-col {
+.historia-row.visible .image-col, /* This is figure now in some files */
+.historia-row.visible figure.image-col {
     transform: translateX(0);
 }
 
@@ -283,7 +344,10 @@ p {
 }
 
 
-.image-col {
+.image-col { /* This is figure now in some files */
+    margin-bottom: 2rem;
+}
+figure.image-col {
     margin-bottom: 2rem;
 }
 
@@ -295,11 +359,18 @@ p {
         align-items: flex-start;
     }
 
-    .image-col, .text-col {
+    .image-col, .text-col { /* .image-col is figure now in some files */
+        width: 50%;
+    }
+    figure.image-col {
         width: 50%;
     }
 
-    .image-col {
+    .image-col { /* This is figure now in some files */
+        margin-bottom: 0;
+        padding-right: 1rem;
+    }
+    figure.image-col {
         margin-bottom: 0;
         padding-right: 1rem;
     }
@@ -321,7 +392,7 @@ p {
     width: 100%;
     margin: 0 auto;
     max-width: 1200px; 
-    border-radius: 10px;
+    border-radius: 10px; /* Consider making a variable */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
@@ -334,23 +405,26 @@ p {
     list-style: none;
 }
 
-h3 {
+h3 { /* General h3 styling */
     text-align: center; 
-    font-weight: 600;
+    font-weight: var(--nav-link-font-weight); /* Assuming similar weight to nav links */
     margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
+    font-size: var(--h3-font-size);
+    color: var(--primary-text-color);
+}
+.dark-mode h3 {
+    color: var(--dark-mode-text-color);
 }
 
 
 .list-group-item {
     padding: 15px; 
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    background-color: var(--list-item-bg-color);
+    border: 1px solid var(--list-item-border-color);
+    border-radius: 8px; /* Consider making a variable */
     margin-bottom: 10px;
-    font-size: 18px;
-    color: #333;
+    font-size: 18px; /* Consider making a variable */
+    color: var(--list-item-text-color);
     transition: all 0.3s ease;
     display: flex;
     justify-content: center; 
@@ -366,14 +440,13 @@ h3 {
 
 
 .list-group-item:hover {
-    background-color: #bae3a3;
-    color: white;
+    background-color: var(--list-item-hover-bg-color);
+    color: var(--list-item-hover-text-color);
     cursor: pointer;
-    border-color: #ce5a2c;
-    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+    border-color: var(--list-item-hover-border-color);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3); /* This shadow is different from variable */
 }
 
 .list-group-item:hover:before {
-    color: white;
+    color: var(--list-item-hover-text-color);
 }
-
